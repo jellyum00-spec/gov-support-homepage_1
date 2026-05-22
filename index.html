@@ -669,14 +669,12 @@
     transition: transform .5s ease;
   }
   .case-card:hover .case-thumb img { transform: scale(1.05); }
-  .case-thumb::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.55), transparent 50%);
+  .case-card.odd-case .case-thumb { background: #050505; }
+  .case-card.odd-case .case-thumb img {
+    object-fit: cover;
+    object-position: 50% 28%;
   }
-  .case-thumb b {
-    position: absolute; left: 28px; bottom: 22px; z-index: 1;
-    color: #fff; font-size: 26px; font-weight: 800; letter-spacing: -.025em;
-  }
+  .case-card.odd-case:hover .case-thumb img { transform: scale(1.05); }
   .case-body { padding: 30px 32px 36px; }
   .case-kind {
     display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .08em;
@@ -971,8 +969,8 @@
     --green-soft: #ecfdf3;
     --green-soft-2: #d1fadf;
     --green-deep: #054f31;
-    --blue: #2563eb;
-    --blue-soft: #eff6ff;
+    --accent: #079455;
+    --accent-soft: #ecfdf3;
     --amber: #f59e0b;
     --amber-soft: #fffbeb;
     --line: #e4e7ec;
@@ -987,8 +985,8 @@
     --sh-green: 0 12px 28px rgba(18,183,106,.22);
     --sh-green-deep: 0 20px 50px rgba(18,183,106,.28);
     --sh-card: 0 1px 2px rgba(16,24,40,.04), 0 10px 24px rgba(16,24,40,.06);
-    --grad-green: linear-gradient(135deg, #12b76a 0%, #2563eb 100%);
-    --grad-green-2: linear-gradient(135deg, #6ce9a6 0%, #93c5fd 100%);
+    --grad-green: linear-gradient(135deg, #12b76a 0%, #039855 100%);
+    --grad-green-2: linear-gradient(135deg, #6ce9a6 0%, #12b76a 100%);
     --grad-dark: linear-gradient(180deg, #101828 0%, #182230 100%);
     --grad-dark-h: linear-gradient(180deg, #111827 0%, #101828 100%);
   }
@@ -1066,10 +1064,10 @@
     color: var(--ink);
   }
   .btn-dark { background: #101828; }
-  .btn-dark:hover { background: #2563eb; }
+  .btn-dark:hover { background: #079455; }
 
   .eyebrow {
-    color: var(--blue);
+    color: var(--accent);
     letter-spacing: .04em;
     margin-bottom: 18px;
   }
@@ -1157,36 +1155,6 @@
       linear-gradient(90deg, rgba(16,24,40,.34), transparent 48%);
     pointer-events: none;
   }
-  .hero-visual-card {
-    position: absolute;
-    left: 24px;
-    right: 24px;
-    bottom: 24px;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 14px;
-    border-radius: 18px;
-    background: rgba(255,255,255,.9);
-    box-shadow: 0 20px 48px rgba(16,24,40,.24);
-    backdrop-filter: blur(12px);
-  }
-  .hero-visual-card span {
-    display: block;
-    color: #667085;
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: .02em;
-    margin-bottom: 4px;
-  }
-  .hero-visual-card strong {
-    display: block;
-    color: #101828;
-    font-size: 16px;
-    line-height: 1.2;
-    letter-spacing: -.03em;
-  }
   .hero-badge {
     width: fit-content;
     color: #d1fadf;
@@ -1200,15 +1168,15 @@
     max-width: 980px;
   }
   .zero-big {
-    color: #101828;
-    padding: 0 18px 4px;
+    display: inline-block;
+    color: var(--green);
+    padding: 0;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    text-shadow: none;
   }
   .zero-big::before {
-    inset: 10px 0 12px;
-    border-radius: 18px;
-    background: #86efac;
-    box-shadow: none;
-    transform: rotate(-.8deg);
+    display: none;
   }
   .hero .lead {
     max-width: 680px;
@@ -1262,12 +1230,17 @@
     border-color: #e4e7ec;
     box-shadow: var(--sh-card);
   }
+  .pain-card .pain-q {
+    min-height: 58px;
+    display: flex;
+    align-items: flex-start;
+  }
   .pain-mark {
     font-size: 13px;
     width: fit-content;
-    color: #175cd3;
-    background: var(--blue-soft);
-    border: 1px solid #bfdbfe;
+    color: #067647;
+    background: var(--accent-soft);
+    border: 1px solid #abefc6;
     border-radius: 999px;
     padding: 7px 11px;
     margin-bottom: 22px;
@@ -1368,12 +1341,12 @@
   }
   .pcard::before {
     height: 3px;
-    background: linear-gradient(90deg, #12b76a, #2563eb);
+    background: linear-gradient(90deg, #12b76a, #039855);
     transform: scaleX(1);
   }
   .pcard-num strong {
     font-size: 32px;
-    color: #175cd3;
+    color: #067647;
   }
   .pcard:hover .pcard-num strong { font-size: 32px; }
   .pcard-tag {
@@ -1457,9 +1430,9 @@
   .case-thumb { aspect-ratio: 1.9 / 1; }
   .case-body { padding: 28px; }
   .case-kind {
-    color: #175cd3;
-    background: var(--blue-soft);
-    border: 1px solid #bfdbfe;
+    color: #067647;
+    background: var(--accent-soft);
+    border: 1px solid #abefc6;
     border-radius: 999px;
     padding: 6px 10px;
     letter-spacing: .03em;
@@ -1495,7 +1468,7 @@
     background: #f6f8fb;
     color: var(--ink);
   }
-  .contact-section .eyebrow { color: #175cd3; }
+  .contact-section .eyebrow { color: #067647; }
   .contact-section .eyebrow::before { background: #12b76a; }
   .contact-section h2 { color: var(--ink); }
   .contact-section h2 .hl {
@@ -1517,8 +1490,8 @@
   }
   .field input:focus,
   .field textarea:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 4px rgba(37,99,235,.12);
+    border-color: #12b76a;
+    box-shadow: 0 0 0 4px rgba(18,183,106,.14);
   }
 
   footer {
@@ -1531,7 +1504,9 @@
     .hero-layout,
     .process-showcase,
     .payback-media { grid-template-columns: 1fr; }
-    .hero-visual { min-height: 420px; }
+    .hero-visual,
+    .section-photo,
+    .payback-photo { display: none; }
     .process-flow { grid-template-columns: 1fr; }
     .price-grid { grid-template-columns: 1fr; }
   }
@@ -1542,12 +1517,6 @@
     .nav { height: 64px; }
     .hero h1 { font-size: 48px; }
     .hero-visual { min-height: 330px; border-radius: 20px; }
-    .hero-visual-card {
-      left: 14px;
-      right: 14px;
-      bottom: 14px;
-      grid-template-columns: 1fr;
-    }
     .section-photo,
     .payback-photo { min-height: 260px; border-radius: 18px; }
     .hero-price-strip { border-radius: 18px; }
@@ -1596,7 +1565,7 @@
           <span class="line">선정되면 개발비</span>
           <span class="line"><span class="zero-big">0원</span></span>
         </h1>
-        <p class="lead anim su">정부 지원금으로 개발하고, 정부지원사업에 선정되면 초기 개발비를 전액 페이백. 아이디어만 있으면 시작할 수 있습니다.</p>
+        <p class="lead anim su">아이디어만 있으면 시작할 수 있습니다.<br/>정부지원사업에 선정되면 초기 개발비를 전액 페이백해드립니다.</p>
         <p class="hero-cond anim su">* 페이백은 정부지원사업 선정 시 제공됩니다. 자세한 조건은 아래 페이백 안내를 확인하세요.</p>
         <div class="hero-actions anim su">
           <a href="#contact" class="btn btn-primary btn-xl">무료 상담 신청하기 <span class="arrow">→</span></a>
@@ -1604,12 +1573,7 @@
         </div>
       </div>
       <div class="hero-visual anim sr" aria-hidden="true">
-        <img src="assets/hero-consulting.png" alt="" loading="eager" />
-        <div class="hero-visual-card">
-          <div><span>검토</span><strong>지원 가능성</strong></div>
-          <div><span>제작</span><strong>기획·디자인·개발</strong></div>
-          <div><span>선정 시</span><strong>전액 페이백</strong></div>
-        </div>
+        <img src="assets/hero-consulting-v2.png" alt="" loading="eager" />
       </div>
     </div>
 
@@ -1876,16 +1840,16 @@
       <p>3W와 함께 만든 서비스들. 다양한 분야에서 결과로 증명합니다.</p>
     </div>
     <div class="case-grid seq">
-      <div class="case-card anim sl">
-        <div class="case-thumb"><img src="assets/product-workshop.png" alt="odd project 카페 브랜드" loading="lazy" /><b>odd project</b></div>
+      <div class="case-card odd-case anim sl">
+        <div class="case-thumb"><img src="assets/odd-street.jpg" alt="ODD Street 카페 브랜드" loading="lazy" /></div>
         <div class="case-body">
           <span class="case-kind">카페 · 브랜드</span>
-          <h3>odd project</h3>
-          <p>오프라인 카페 브랜드의 디지털 전환 프로젝트.</p>
+          <h3>ODD Street</h3>
+          <p>신규 카페 브랜드 런칭 및 디지털 최적화 프로젝트.</p>
         </div>
       </div>
       <div class="case-card anim sr">
-        <div class="case-thumb"><img src="assets/launch-dashboard.png" alt="블랙라벨 성형 정보 플랫폼" loading="lazy" /><b>블랙라벨</b></div>
+        <div class="case-thumb"><img src="assets/blacklabel.jpg" alt="블랙라벨 성형 정보 플랫폼" loading="lazy" /></div>
         <div class="case-body">
           <span class="case-kind">플랫폼 · 헬스케어</span>
           <h3>블랙라벨</h3>
