@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>정부지원 사업화 파트너 | 3W</title>
+<meta name="description" content="지금 만들고, 정부지원사업에 선정되면 개발비 전액 페이백. 아이디어 검토부터 제작까지, 정부지원 사업화 파트너 3W." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #ffffff;
+    --paper: #fafaf8;
+    --mint: #e6f7ee;
+    --mint-2: #d2efdf;
+    --ink: #0a0a0a;
+    --ink-2: #1a1a1a;
+    --ink-soft: #5b6573;
+    --ink-mute: #98a1ac;
+    --dark: #0f1115;
+    --green: #04ab5d;
+    --green-d: #03894a;
+    --green-bright: #04ab5d;
+    --line: #ececec;
+    --line-2: #e4e4e4;
+
+    --grad: linear-gradient(135deg, #04ab5d 0%, #06c46b 100%);
+    --grad-soft: linear-gradient(135deg, #eaf9f1, #d6f1e1);
+
+    --r-sm: 14px;
+    --r-md: 22px;
+    --r-lg: 30px;
+
+    --sh-sm: 0 4px 16px rgba(20,32,28,.05);
+    --sh-md: 0 16px 40px rgba(20,32,28,.08);
+    --sh-lg: 0 30px 70px rgba(20,32,28,.14);
+    --sh-green: 0 14px 32px rgba(4,171,93,.28);
+
+    --serif: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--white); color: var(--ink); line-height: 1.62;
+    -webkit-font-smoothing: antialiased; word-break: keep-all; overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: var(--serif); }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: inherit; font-weight: 600; font-size: 15.5px; line-height: 1;
+    border: none; border-radius: 999px; cursor: pointer; padding: 16px 28px;
+    transition: transform .2s ease, box-shadow .22s ease, background .2s ease, color .2s ease;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { transform: translateY(-2px); background: var(--green); }
+  .btn-soft { background: var(--mint); color: var(--green-d); }
+  .btn-soft:hover { transform: translateY(-2px); background: var(--mint-2); }
+  .btn-line { background: var(--white); color: var(--ink); border: 1.5px solid var(--line-2); }
+  .btn-line:hover { transform: translateY(-2px); border-color: var(--ink); }
+  .btn-sm { padding: 11px 18px; font-size: 14px; }
+  .btn-block { width: 100%; }
+  .btn .arrow { font-size: 1.05em; transition: transform .22s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,.82);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    backdrop-filter: blur(16px) saturate(180%);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .header.scrolled { border-bottom-color: var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+
+  /* 3W 로고 - www 점점 커지는 형태 */
+  .logo { display: flex; align-items: center; gap: 12px; }
+  .logo .mark {
+    display: inline-flex; align-items: baseline; gap: 1px;
+    font-family: var(--serif); font-weight: 700; color: var(--ink); line-height: 1;
+  }
+  .logo .mark span:nth-child(1) { font-size: 13px; }
+  .logo .mark span:nth-child(2) { font-size: 18px; }
+  .logo .mark span:nth-child(3) { font-size: 25px; }
+  .logo .logo-label {
+    font-family: var(--serif); font-weight: 500; font-size: 15px;
+    letter-spacing: -.01em; color: var(--ink-soft);
+    padding-left: 14px; border-left: 1px solid var(--line-2); margin-left: 4px;
+  }
+  .nav-links { display: flex; align-items: center; gap: 30px; }
+  .nav-links a { font-size: 14.5px; font-weight: 500; color: var(--ink-soft); transition: color .15s ease; }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ---------- Section base ---------- */
+  section { padding: 116px 0; position: relative; }
+  .bg-paper { background: var(--paper); }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--serif); font-style: normal;
+    font-size: 14.5px; font-weight: 500; letter-spacing: -.005em;
+    color: var(--green-d); margin-bottom: 20px;
+  }
+  .eyebrow::before { content: "✱"; font-style: normal; color: var(--green); }
+  .s-head { text-align: center; max-width: 760px; margin: 0 auto 62px; }
+  h2 {
+    font-family: var(--serif);
+    font-size: 46px; line-height: 1.18; font-weight: 500; letter-spacing: -.03em;
+  }
+  h2 .hl-italic { font-style: normal; font-weight: 500; color: var(--green-d); }
+  .s-head p { margin-top: 18px; font-size: 17px; color: var(--ink-soft); line-height: 1.7; }
+  .hl { color: var(--green-d); font-weight: 600; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 88px 0 0; overflow: hidden; text-align: center; }
+  .hero-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+  .hero-bg span { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .hero-bg .g1 { width: 480px; height: 480px; top: -150px; right: -60px; background: rgba(4,171,93,.12); }
+  .hero-bg .g2 { width: 420px; height: 420px; bottom: -160px; left: -100px; background: rgba(6,196,107,.1);
+    animation: drift 20s ease-in-out infinite; }
+  @keyframes drift { 0%,100% { transform: translate(0,0); } 50% { transform: translate(40px,-30px); } }
+
+  .hero-stage { position: relative; padding-bottom: 80px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; font-weight: 600;
+    color: var(--green-d); background: var(--mint); border: 1px solid var(--mint-2);
+    padding: 9px 16px; border-radius: 999px; margin-bottom: 28px;
+  }
+  .hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+    box-shadow: 0 0 0 0 rgba(4,171,93,.6); animation: pulse 2s infinite; }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(4,171,93,.5); }
+    70% { box-shadow: 0 0 0 9px rgba(4,171,93,0); }
+    100% { box-shadow: 0 0 0 0 rgba(4,171,93,0); }
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: 64px; line-height: 1.12; font-weight: 500; letter-spacing: -.035em;
+    max-width: 880px; margin: 0 auto;
+  }
+  .hero h1 .line { display: block; }
+  .hero h1 em { font-style: normal; font-weight: 500; color: var(--green-d); }
+  .zero {
+    display: inline-block; background: var(--grad); color: #fff;
+    padding: 4px 20px; border-radius: 18px; transform: rotate(-2deg);
+    box-shadow: var(--sh-green);
+    font-style: normal; font-family: var(--serif); font-weight: 600;
+  }
+  .hero .lead { margin: 26px auto 14px; font-size: 17.5px; color: var(--ink-soft); max-width: 580px; line-height: 1.7; }
+  .hero-cond { font-size: 13px; color: var(--ink-mute); margin-bottom: 32px; }
+  .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* floating chips - 미니멀하게 정돈 */
+  .float-chip {
+    position: absolute; display: flex; align-items: center; gap: 9px;
+    padding: 12px 18px; border-radius: 14px; font-size: 13.5px; font-weight: 600;
+    background: rgba(255,255,255,.85); border: 1px solid var(--line);
+    -webkit-backdrop-filter: blur(18px) saturate(180%); backdrop-filter: blur(18px) saturate(180%);
+    box-shadow: var(--sh-md);
+    color: var(--ink-2);
+  }
+  .float-chip .emo { font-size: 17px; }
+  .float-chip.fc1 { top: 24px; left: 0; animation: floaty 6s ease-in-out infinite; }
+  .float-chip.fc2 { top: 160px; right: 0; animation: floaty 7s ease-in-out infinite .8s; }
+  .float-chip.fc3 { bottom: 20px; left: 5%; animation: floaty 6.5s ease-in-out infinite .4s; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+
+  /* ---------- Marquee (히어로 아래) ---------- */
+  .marquee {
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    padding: 26px 0; overflow: hidden; position: relative; background: #fff;
+  }
+  .marquee::before, .marquee::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 140px; z-index: 2; pointer-events: none;
+  }
+  .marquee::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+  .marquee::after { right: 0; background: linear-gradient(to left, #fff, transparent); }
+  .marquee-track {
+    display: flex; gap: 0; width: max-content; align-items: center;
+    animation: scroll 28s linear infinite;
+  }
+  .marquee-item {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-size: 18px; font-weight: 400; letter-spacing: -.005em;
+    color: var(--ink); white-space: nowrap; padding: 0 36px;
+    display: flex; align-items: center;
+  }
+  .marquee-sep {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+    flex-shrink: 0;
+  }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- Pain ---------- */
+  .pain-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+  .pain-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 36px 32px; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+  .pain-card:hover { transform: translateY(-6px); box-shadow: var(--sh-md); border-color: var(--mint-2); }
+  .pain-q {
+    font-family: var(--serif); font-style: normal;
+    font-size: 16.5px; font-weight: 500; color: var(--ink-mute); margin-bottom: 14px; line-height: 1.5;
+  }
+  .pain-q::before { content: "Q. "; color: var(--green-d); font-style: normal; font-weight: 600; }
+  .pain-a {
+    font-family: var(--serif);
+    font-size: 19px; font-weight: 500; letter-spacing: -.015em; line-height: 1.45;
+  }
+  .pain-a::before { content: "A. "; color: var(--green-d); font-weight: 600; }
+
+  /* ---------- Features (bento grid) ---------- */
+  .feat-grid {
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 18px;
+    grid-auto-rows: 1fr;
+  }
+  .feat-card {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 34px 32px; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+  .feat-card:hover { transform: translateY(-8px); box-shadow: var(--sh-md); border-color: var(--mint-2); }
+  .feat-card.wide {
+    grid-column: span 2;
+    display: flex; align-items: center; gap: 30px;
+  }
+  .feat-card.wide .feat-emoji { margin-bottom: 0; flex-shrink: 0; }
+  .feat-card.wide .feat-text { flex: 1; }
+  .feat-emoji {
+    width: 60px; height: 60px; border-radius: 16px; margin-bottom: 22px;
+    display: grid; place-items: center; font-size: 28px; background: var(--grad-soft);
+  }
+  .feat-card.wide .feat-emoji { width: 72px; height: 72px; font-size: 34px; }
+  .feat-card h3 {
+    font-family: var(--serif);
+    font-size: 21px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 12px; line-height: 1.3;
+  }
+  .feat-card.wide h3 { font-size: 23px; }
+  .feat-card p { font-size: 15px; color: var(--ink-soft); line-height: 1.65; }
+
+  /* ---------- Process (sticky scroll) ---------- */
+  .proc { display: grid; grid-template-columns: .8fr 1fr; gap: 48px; align-items: start; }
+
+  .proc-sticky { position: sticky; top: 110px; align-self: start; }
+  .proc-stage {
+    background: var(--white); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 42px 40px; box-shadow: var(--sh-sm);
+  }
+  .proc-tag {
+    font-family: var(--serif); font-size: 13px; font-weight: 600;
+    letter-spacing: .14em; color: var(--green-d);
+  }
+  .proc-bignum {
+    font-family: var(--serif); font-size: 128px; font-weight: 600;
+    line-height: 1; letter-spacing: -.05em; margin: 8px 0 2px;
+    background: var(--grad);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+  .proc-stage-label {
+    font-family: var(--serif); font-size: 25px; font-weight: 500;
+    letter-spacing: -.02em; margin-bottom: 26px; min-height: 30px;
+  }
+  .proc-track { height: 6px; border-radius: 999px; background: var(--mint); overflow: hidden; }
+  .proc-track-fill {
+    height: 100%; width: 0%; border-radius: 999px; background: var(--grad);
+  }
+  .proc-count { margin-top: 13px; font-size: 13px; color: var(--ink-mute); }
+  .proc-count b { color: var(--green-d); font-weight: 600; }
+
+  .proc-steps { display: flex; flex-direction: column; gap: 26px; }
+  .proc-step {
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md);
+    padding: 36px; min-height: 220px;
+    display: flex; flex-direction: column; justify-content: center;
+    transition: box-shadow .45s ease, border-color .45s ease;
+  }
+  .proc-step.active { border-color: var(--mint-2); box-shadow: var(--sh-md); }
+  .proc-step-head { display: flex; align-items: center; gap: 14px; margin-bottom: 13px; }
+  .proc-step-num {
+    width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%;
+    background: var(--grad-soft); color: var(--green-d);
+    display: grid; place-items: center;
+    font-family: var(--serif); font-size: 16px; font-weight: 600;
+    transition: background .45s ease, color .45s ease;
+  }
+  .proc-step.active .proc-step-num { background: var(--grad); color: #fff; }
+  .proc-step h3 {
+    font-family: var(--serif); font-size: 21px; font-weight: 500; letter-spacing: -.02em;
+  }
+  .proc-step p { font-size: 15px; color: var(--ink-soft); line-height: 1.7; }
+
+  /* ---------- Payback ---------- */
+  .pay-grid { display: flex; align-items: stretch; gap: 14px; }
+  .pay-card {
+    flex: 1; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 38px 32px; position: relative;
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .pay-card:hover { transform: translateY(-6px); box-shadow: var(--sh-md); }
+  .pay-card.highlight {
+    background: var(--grad); border-color: transparent; box-shadow: var(--sh-green);
+  }
+  .pay-step {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 12px;
+    background: var(--mint); color: var(--green-d);
+    font-family: var(--serif); font-weight: 600; font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .pay-card.highlight .pay-step { background: rgba(255,255,255,.22); color: #fff; }
+  .pay-card h3 {
+    font-family: var(--serif);
+    font-size: 22px; font-weight: 500; letter-spacing: -.02em; margin-bottom: 12px;
+  }
+  .pay-card p { font-size: 14.5px; color: var(--ink-soft); line-height: 1.65; }
+  .pay-card.highlight h3 { color: #fff; }
+  .pay-card.highlight p { color: rgba(255,255,255,.88); }
+  .pay-amt {
+    margin-top: 18px;
+    font-family: var(--serif); font-size: 30px; font-weight: 600;
+    letter-spacing: -.03em; color: var(--green-d);
+  }
+  .pay-card.highlight .pay-amt { color: #fff; }
+  .pay-arrow {
+    display: flex; align-items: center; color: var(--mint-2);
+    font-family: var(--serif); font-size: 28px; font-weight: 500;
+  }
+  .pay-note {
+    max-width: 760px; margin: 38px auto 0;
+    background: var(--paper); border: 1px solid var(--line-2); border-radius: var(--r-md);
+    padding: 22px 26px; display: flex; gap: 14px; align-items: flex-start;
+  }
+  .pay-note .bang {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff4d6; color: #b8860b; font-weight: 700; font-size: 14px;
+    display: grid; place-items: center;
+  }
+  .pay-note p { font-size: 14px; color: var(--ink-soft); line-height: 1.65; }
+  .pay-note strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Trust ---------- */
+  .trust-panel {
+    position: relative; overflow: hidden; border-radius: var(--r-lg); padding: 72px 48px;
+    background:
+      radial-gradient(600px 320px at 16% 0%, rgba(4,171,93,.28), transparent 70%),
+      radial-gradient(520px 320px at 86% 100%, rgba(6,196,107,.18), transparent 70%),
+      var(--dark);
+    color: #fff;
+  }
+  .trust-panel::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,.05) 50%, transparent 62%);
+    background-size: 300% 100%; animation: sheen 7s linear infinite;
+  }
+  @keyframes sheen { 0% { background-position: 160% 0; } 100% { background-position: -160% 0; } }
+  .trust-head { position: relative; z-index: 1; text-align: center; max-width: 640px; margin: 0 auto 48px; }
+  .trust-head .eyebrow { color: var(--green-bright); }
+  .trust-head .eyebrow::before { color: var(--green-bright); }
+  .trust-head h2 { color: #fff; }
+  .trust-head h2 .hl-italic { color: var(--green-bright); }
+  .trust-head p { margin-top: 16px; font-size: 16.5px; color: #a7adba; line-height: 1.7; }
+
+  .trust-stats {
+    position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4,1fr);
+    padding-bottom: 44px; margin-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.13);
+  }
+  .t-stat { text-align: center; position: relative; padding: 6px 14px; }
+  .t-stat + .t-stat::before { content: ""; position: absolute; left: 0; top: 14%; height: 72%;
+    width: 1px; background: rgba(255,255,255,.13); }
+  .t-stat .num {
+    font-family: var(--serif); font-size: 52px; font-weight: 500;
+    letter-spacing: -.04em; color: var(--green-bright); line-height: 1;
+  }
+  .t-stat .num .suf { font-size: 28px; }
+  .t-stat .lbl { margin-top: 10px; font-size: 13.5px; font-weight: 500; color: #a7adba; }
+
+  .trust-row { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4,1fr); }
+  .trust-item { text-align: center; padding: 14px 22px; position: relative; }
+  .trust-item + .trust-item::before {
+    content: ""; position: absolute; left: 0; top: 8%; height: 84%; width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,.2), transparent);
+  }
+  .trust-mark { width: 40px; height: 4px; border-radius: 999px; margin: 0 auto 20px;
+    background: var(--grad); box-shadow: 0 0 14px rgba(4,171,93,.7); }
+  .trust-item strong {
+    display: block; font-family: var(--serif);
+    font-size: 19px; font-weight: 500; letter-spacing: -.02em;
+  }
+  .trust-item span { display: block; margin-top: 8px; font-size: 13px; color: #9aa1ae; }
+
+  /* ---------- Cases (alternating rows) ---------- */
+  .case-list { display: flex; flex-direction: column; gap: 30px; }
+  .case-row {
+    display: grid; grid-template-columns: 1.12fr .88fr;
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg);
+    overflow: hidden;
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+  .case-row:hover { transform: translateY(-6px); box-shadow: var(--sh-lg); border-color: var(--mint-2); }
+  .case-row.flip { grid-template-columns: .88fr 1.12fr; }
+  .case-media { position: relative; min-height: 360px; overflow: hidden; }
+  .case-row.flip .case-media { order: 2; }
+  .case-media img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .55s cubic-bezier(.16,1,.3,1);
+  }
+  .case-row:hover .case-media img { transform: scale(1.06); }
+  .case-media::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(160deg, rgba(4,171,93,.12), rgba(15,17,21,.34));
+  }
+  .case-info {
+    padding: 52px 50px;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  }
+  .case-kind {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: var(--serif); font-style: normal;
+    font-size: 13.5px; font-weight: 500; color: var(--green-d);
+  }
+  .case-kind::before { content: "✱"; font-style: normal; color: var(--green); }
+  .case-info h3 {
+    font-family: var(--serif);
+    font-size: 30px; font-weight: 500; margin: 16px 0 12px; letter-spacing: -.025em; line-height: 1.25;
+  }
+  .case-info p { font-size: 16px; color: var(--ink-soft); line-height: 1.7; }
+
+  /* ---------- Pricing ---------- */
+  .price-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 26px;
+    max-width: 920px; margin: 0 auto; }
+  .price-card {
+    position: relative; background: var(--white); border: 1px solid var(--line);
+    border-radius: var(--r-lg); padding: 44px 40px;
+    transition: transform .22s ease, box-shadow .22s ease;
+  }
+  .price-card:hover { transform: translateY(-6px); box-shadow: var(--sh-md); }
+  .price-card.featured { border: 2px solid var(--green); box-shadow: var(--sh-green); }
+  .price-tag {
+    position: absolute; top: -16px; left: 38px; background: var(--grad); color: #fff;
+    font-family: var(--serif); font-style: normal;
+    font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 999px;
+    box-shadow: var(--sh-green);
+  }
+  .price-name {
+    font-family: var(--serif);
+    font-size: 30px; font-weight: 500; letter-spacing: -.03em;
+  }
+  .price-amount {
+    margin: 12px 0 4px;
+    font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--green-d);
+    letter-spacing: -.02em;
+  }
+  .price-amount .unit { font-size: 15px; color: var(--ink-soft); margin-left: 2px; font-family: var(--sans); }
+  .price-payback {
+    display: inline-block;
+    font-family: var(--serif); font-style: normal;
+    font-size: 13px; font-weight: 500; color: var(--green-d);
+    background: var(--mint); padding: 5px 12px; border-radius: 999px; margin-top: 10px;
+  }
+  .price-desc { margin-top: 16px; font-size: 14.5px; color: var(--ink-soft); min-height: 44px; line-height: 1.7; }
+  .price-list { list-style: none; margin: 24px 0 30px; display: grid; gap: 13px; }
+  .price-list li { display: flex; gap: 10px; font-size: 15px; line-height: 1.5; }
+  .price-list li .ck {
+    flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+    background: var(--mint); color: var(--green-d);
+    display: grid; place-items: center; font-size: 11px; font-weight: 700;
+    margin-top: 2px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact-box {
+    max-width: 740px; margin: 0 auto; background: var(--white);
+    border: 1px solid var(--line); border-radius: var(--r-lg);
+    padding: 54px 48px; box-shadow: var(--sh-md);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 18px; }
+  .field label {
+    display: block; font-family: var(--serif); font-style: normal;
+    font-size: 14px; font-weight: 500; margin-bottom: 8px; color: var(--ink-2);
+  }
+  .field input, .field textarea {
+    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink);
+    background: var(--paper); border: 1.5px solid var(--line-2); border-radius: var(--r-sm);
+    padding: 14px 16px; transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .field textarea { resize: vertical; min-height: 116px; }
+  .field input:focus, .field textarea:focus {
+    outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(4,171,93,.12);
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--ink-mute); }
+  .form-note { font-size: 12.5px; color: var(--ink-mute); margin-top: 14px; text-align: center; }
+  .form-msg {
+    display: none; margin-top: 18px; padding: 15px 16px; border-radius: var(--r-sm);
+    background: var(--mint); border: 1px solid var(--mint-2);
+    color: var(--green-d); font-size: 14px; font-weight: 600; text-align: center;
+  }
+  .form-msg.show { display: block; }
+
+  /* ---------- Footer ---------- */
+  footer { background: var(--dark); color: #9aa1ae; padding: 56px 0; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .foot .logo .mark span { color: #fff; }
+  .foot .logo-label { color: #fff; border-left-color: rgba(255,255,255,.2); }
+  .foot-right { font-size: 14px; font-family: var(--serif); font-style: normal; }
+  .foot-right a { color: var(--green-bright); font-weight: 600; }
+  .foot-copy { margin-top: 28px; padding-top: 24px; border-top: 1px solid #2a2d38; font-size: 13px; }
+
+  /* ---------- Animations ---------- */
+  .anim { opacity: 0; transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+  .anim.sl { transform: translateX(-58px); }
+  .anim.sr { transform: translateX(58px); }
+  .anim.su { transform: translateY(46px); }
+  .anim.sc { transform: scale(.93); }
+  .anim.in { opacity: 1; transform: none; }
+  .seq > *:nth-child(2) { transition-delay: .1s; }
+  .seq > *:nth-child(3) { transition-delay: .2s; }
+  .seq > *:nth-child(4) { transition-delay: .3s; }
+  .seq > *:nth-child(5) { transition-delay: .4s; }
+  .seq > *:nth-child(6) { transition-delay: .5s; }
+  .seq > *:nth-child(7) { transition-delay: .6s; }
+  .seq > *:nth-child(8) { transition-delay: .7s; }
+  .seq > *:nth-child(9) { transition-delay: .8s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .anim { opacity: 1 !important; transform: none !important; transition: none; }
+    .proc-step { opacity: 1 !important; }
+    .hero-bg span, .float-chip, .hero-badge .dot, .trust-panel::after, .marquee-track {
+      animation: none !important;
+    }
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px) {
+    h2 { font-size: 36px; }
+    .hero h1 { font-size: 48px; }
+    .float-chip { display: none; }
+    .pain-grid, .feat-grid, .price-grid { grid-template-columns: 1fr; }
+    .feat-grid { grid-auto-rows: auto; }
+    .feat-card.wide { grid-column: span 1; display: block; }
+    .feat-card.wide .feat-emoji { width: 60px; height: 60px; font-size: 28px; margin-bottom: 22px; }
+    .feat-card.wide h3 { font-size: 21px; }
+    .case-row, .case-row.flip { grid-template-columns: 1fr; }
+    .case-row.flip .case-media { order: 0; }
+    .case-media { min-height: 240px; }
+    .case-info { padding: 36px 30px; }
+    .trust-row { grid-template-columns: repeat(2,1fr); gap: 36px 0; }
+    .trust-item:nth-child(3)::before { display: none; }
+    .trust-stats { grid-template-columns: repeat(2,1fr); gap: 30px 0; }
+    .t-stat:nth-child(3)::before { display: none; }
+    .pay-grid { flex-direction: column; }
+    .pay-arrow { transform: rotate(90deg); align-self: center; }
+    .proc { grid-template-columns: 1fr; gap: 16px; }
+    .proc-sticky { position: sticky; top: 71px; z-index: 40; }
+    .proc-stage {
+      display: flex; align-items: center; gap: 14px;
+      padding: 13px 20px 16px; position: relative; overflow: hidden;
+      border-radius: 16px; box-shadow: var(--sh-md);
+    }
+    .proc-tag, .proc-count { display: none; }
+    .proc-bignum { font-size: 34px; margin: 0; flex-shrink: 0; }
+    .proc-stage-label {
+      flex: 1; min-width: 0; margin: 0; min-height: 0; font-size: 16px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .proc-track { position: absolute; left: 0; right: 0; bottom: 0; width: auto; height: 4px; }
+    .proc-steps { gap: 14px; }
+    .proc-step { min-height: auto; padding: 30px 28px; }
+    .marquee-item { font-size: 16px; padding: 0 28px; }
+    .nav-links { display: none; }
+  }
+  @media (max-width: 640px) {
+    section { padding: 84px 0; }
+    h2 { font-size: 30px; }
+    .hero { padding: 56px 0 0; }
+    .hero-stage { padding-bottom: 60px; }
+    .hero h1 { font-size: 36px; }
+    .trust-stats { grid-template-columns: 1fr; gap: 26px 0; }
+    .t-stat + .t-stat::before { display: none; }
+    .trust-row { grid-template-columns: 1fr; }
+    .trust-item + .trust-item::before { display: none; }
+    .trust-panel, .contact-box { padding: 40px 24px; }
+    .case-info { padding: 30px 24px; }
+    .case-media { min-height: 210px; }
+    .form-row { grid-template-columns: 1fr; }
+    .hero-actions, .hero-actions .btn { width: 100%; }
+    .marquee-item { font-size: 15px; padding: 0 20px; }
+    .marquee { padding: 20px 0; }
+    .logo .logo-label { display: none; }
+  }
+  section[id] { scroll-margin-top: 88px; }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="logo">
+      <span class="mark"><span>w</span><span>w</span><span>w</span></span>
+      <span class="logo-label">정부지원 사업화 파트너</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">강점</a>
+      <a href="#process">진행 과정</a>
+      <a href="#payback">페이백</a>
+      <a href="#pricing">가격</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary btn-sm">무료 상담 신청</a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-bg"><span class="g1"></span><span class="g2"></span></div>
+  <div class="wrap hero-stage">
+    <div class="float-chip fc1 anim"><span class="emo">💡</span> 아이디어만 있으면 OK</div>
+    <div class="float-chip fc2 anim"><span class="emo">🏛️</span> 정책 전문가 상주</div>
+    <div class="float-chip fc3 anim"><span class="emo">🤝</span> 기획·디자인·개발 한 팀</div>
+
+    <span class="hero-badge anim su"><span class="dot"></span>「모두의 창업」 AI 솔루션 기관</span>
+    <h1 class="anim su">
+      <span class="line">지금 만들고,</span>
+      <span class="line">선정되면 개발비 <span class="zero">0원</span></span>
+    </h1>
+    <p class="lead anim su">정부 지원금으로 개발하고, 정부지원사업에 선정되면 초기 개발비를 전액 페이백. 아이디어만 있으면 시작할 수 있습니다.</p>
+    <p class="hero-cond anim su">* 페이백은 정부지원사업 선정 시 제공됩니다. 자세한 조건은 아래 페이백 안내를 확인하세요.</p>
+    <div class="hero-actions anim su">
+      <a href="#contact" class="btn btn-primary">무료 상담 신청하기 <span class="arrow">→</span></a>
+      <a href="#payback" class="btn btn-line">페이백 구조 보기</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Marquee (히어로 바로 아래) ===== -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span class="marquee-item">예비창업패키지</span>
+    <span class="marquee-sep"></span>
+    <span class="marquee-item">초기창업패키지</span>
+    <span class="marquee-sep"></span>
+    <span class="marquee-item">청년창업사관학교</span>
+    <span class="marquee-sep"></span>
+    <span class="marquee-item">스마트공방</span>
+    <span class="marquee-sep"></span>
+    <span class="marquee-item">소상공인 디지털</span>
+    <span class="marquee-sep"></span>
+    <span class="marquee-item">디지털 전환 지원</span>
+    <span class="marquee-sep"></span>
+  </div>
+</div>
+
+<!-- ===== Pain ===== -->
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">시작 전 점검</span>
+      <h2>혹시, <span class="hl-italic">이런 고민</span> 하고 계신가요?</h2>
+      <p>정부지원사업을 준비하며 누구나 마주하는 고민들. 3W가 답을 드립니다.</p>
+    </div>
+    <div class="pain-grid seq">
+      <div class="pain-card anim sl">
+        <p class="pain-q">정부 지원사업, 받을 수 있는지부터 모르겠어요</p>
+        <p class="pain-a">아이디어 단계에서 지원 가능 여부와 적합한 사업을 먼저 검토해 드립니다.</p>
+      </div>
+      <div class="pain-card anim su">
+        <p class="pain-q">개발은 어디에 맡겨야 할지 막막해요</p>
+        <p class="pain-a">기획·디자인·개발이 한 팀입니다. 여러 외주를 거칠 필요가 없습니다.</p>
+      </div>
+      <div class="pain-card anim sr">
+        <p class="pain-q">사업계획서는 썼는데, 실제로 만들 수 있을까요?</p>
+        <p class="pain-a">계획서 속 아이디어를 실제 동작하는 화면과 서비스로 구현합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Features ===== -->
+<section id="features">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">핵심 강점</span>
+      <h2>수많은 선택지 중, 결국 <span class="hl-italic">3W</span>인 이유</h2>
+      <p>사업화 기획부터 개발, 선정 이후 성장까지 한 팀이 함께합니다.</p>
+    </div>
+    <div class="feat-grid seq">
+      <div class="feat-card wide anim su">
+        <div class="feat-emoji">🎯</div>
+        <div class="feat-text">
+          <h3>검토부터 제작까지 한 번에</h3>
+          <p>정부 지원 가능 여부 검토부터 서비스 제작까지, 한 파트너가 끝까지 책임집니다.</p>
+        </div>
+      </div>
+      <div class="feat-card anim su">
+        <div class="feat-emoji">🏛️</div>
+        <div class="feat-text">
+          <h3>정책 전문가가 함께합니다</h3>
+          <p>내부에 정책 담당자가 있어, 사업별 요구사항과 행정 절차까지 꼼꼼히 챙깁니다.</p>
+        </div>
+      </div>
+      <div class="feat-card anim su">
+        <div class="feat-emoji">📊</div>
+        <div class="feat-text">
+          <h3>사업화 관점에서 먼저 정리</h3>
+          <p>개발에 들어가기 전, 사업이 실제로 통하도록 방향과 우선순위부터 정리합니다.</p>
+        </div>
+      </div>
+      <div class="feat-card wide anim su">
+        <div class="feat-emoji">🧩</div>
+        <div class="feat-text">
+          <h3>사업별 맞춤 커스터마이징</h3>
+          <p>정부지원사업마다 다른 조건과 요구사항에 맞춰 하나하나 설계합니다.</p>
+        </div>
+      </div>
+      <div class="feat-card wide anim su">
+        <div class="feat-emoji">💳</div>
+        <div class="feat-text">
+          <h3>성과에 따른 단계적 결제</h3>
+          <p>성취 결과에 따라 단계별로 결제해, 한 번에 큰 부담을 지지 않습니다.</p>
+        </div>
+      </div>
+      <div class="feat-card anim su">
+        <div class="feat-emoji">🌱</div>
+        <div class="feat-text">
+          <h3>선정 이후에도 성장 지원</h3>
+          <p>지원사업 선정이 끝이 아닙니다. 운영과 다음 성장 단계까지 함께합니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Process (5 steps) ===== -->
+<section id="process" class="bg-paper">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">진행 과정</span>
+      <h2>검토부터 운영까지, <span class="hl-italic">명확한 5단계</span></h2>
+      <p>지금 어느 단계에 있는지, 다음에 무엇을 하는지 늘 분명하게 안내합니다.</p>
+    </div>
+    <div class="proc">
+      <div class="proc-sticky">
+        <div class="proc-stage">
+          <div class="proc-tag">STEP</div>
+          <div class="proc-bignum" data-proc-num>01</div>
+          <div class="proc-stage-label" data-proc-label>지원 가능성 검토</div>
+          <div class="proc-track"><div class="proc-track-fill"></div></div>
+          <p class="proc-count"><b data-proc-current>1</b> / 5 단계</p>
+        </div>
+      </div>
+      <div class="proc-steps">
+        <div class="proc-step active">
+          <div class="proc-step-head">
+            <span class="proc-step-num">01</span>
+            <h3>지원 가능성 검토</h3>
+          </div>
+          <p>아이디어를 듣고 적합한 정부지원사업과 선정 가능성을 진단합니다.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step-head">
+            <span class="proc-step-num">02</span>
+            <h3>사업화 기획</h3>
+          </div>
+          <p>사업화 관점에서 서비스의 방향과 범위를 함께 정리합니다.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step-head">
+            <span class="proc-step-num">03</span>
+            <h3>디자인</h3>
+          </div>
+          <p>사용자가 쓰는 화면과 브랜드 경험을 설계합니다.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step-head">
+            <span class="proc-step-num">04</span>
+            <h3>개발 · 배포</h3>
+          </div>
+          <p>실제 동작하는 서비스로 구현하고, 검수를 거쳐 안정적으로 출시합니다.</p>
+        </div>
+        <div class="proc-step">
+          <div class="proc-step-head">
+            <span class="proc-step-num">05</span>
+            <h3>런칭 · 운영</h3>
+          </div>
+          <p>출시 후 운영을 함께 챙기고, 안정적인 서비스로 자리잡도록 돕습니다.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Payback ===== -->
+<section id="payback">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">개발비 페이백</span>
+      <h2>선정되면, 개발비를 <span class="hl-italic">전액 돌려드립니다</span></h2>
+      <p>초기 개발비로 먼저 시작하고, 정부지원사업에 선정되면 전액 페이백받는 구조입니다.</p>
+    </div>
+    <div class="pay-grid seq">
+      <div class="pay-card anim sl">
+        <div class="pay-step">1</div>
+        <h3>초기 개발비 결제</h3>
+        <p>올인원 패키지로 개발을 바로 시작합니다. 아이디어만 있으면 됩니다.</p>
+        <div class="pay-amt">올인원 패키지</div>
+      </div>
+      <div class="pay-arrow anim sc">→</div>
+      <div class="pay-card anim su">
+        <div class="pay-step">2</div>
+        <h3>정부지원사업 선정</h3>
+        <p>3W가 지원 가능성 검토부터 신청까지 함께 지원합니다.</p>
+        <div class="pay-amt">검토 · 신청 지원</div>
+      </div>
+      <div class="pay-arrow anim sc">→</div>
+      <div class="pay-card highlight anim sr">
+        <div class="pay-step">3</div>
+        <h3>개발비 전액 페이백</h3>
+        <p>선정되면 초기에 결제하신 개발비를 전액 돌려드립니다.</p>
+        <div class="pay-amt">0원</div>
+      </div>
+    </div>
+    <div class="pay-note anim su">
+      <span class="bang">!</span>
+      <p><strong>꼭 확인해 주세요.</strong> 정부지원사업 선정 여부는 정부가 결정하며, 3W가 선정을 보장하지 않습니다. 정부지원사업에 선정되지 않으면 페이백은 제공되지 않으며, 결제하신 개발비는 실제 서비스 개발에 사용됩니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Trust ===== -->
+<section>
+  <div class="wrap">
+    <div class="trust-panel anim sc">
+      <div class="trust-head">
+        <span class="eyebrow">신뢰</span>
+        <h2>믿고 <span class="hl-italic">맡기셔도</span> 됩니다</h2>
+        <p>숫자와 인증으로 검증된 정부지원 사업화 파트너.</p>
+      </div>
+      <div class="trust-stats seq">
+        <div class="t-stat anim su">
+          <div class="num"><span data-count="98">0</span><span class="suf">%</span></div>
+          <div class="lbl">정부지원 사업 완료율</div>
+        </div>
+        <div class="t-stat anim su">
+          <div class="num"><span data-count="92">0</span><span class="suf">%</span></div>
+          <div class="lbl">고객 재의뢰율</div>
+        </div>
+        <div class="t-stat anim su">
+          <div class="num"><span data-count="100">0</span><span class="suf">%</span></div>
+          <div class="lbl">소스코드 전체 이전</div>
+        </div>
+        <div class="t-stat anim su">
+          <div class="num"><span data-count="25">0</span><span class="suf">년+</span></div>
+          <div class="lbl">축적된 개발 경험</div>
+        </div>
+      </div>
+      <div class="trust-row seq">
+        <div class="trust-item anim su">
+          <div class="trust-mark"></div>
+          <strong>모두의 창업</strong>
+          <span>AI 솔루션 기관</span>
+        </div>
+        <div class="trust-item anim su">
+          <div class="trust-mark"></div>
+          <strong>벤처기업 인증</strong>
+          <span>기술력 인정</span>
+        </div>
+        <div class="trust-item anim su">
+          <div class="trust-mark"></div>
+          <strong>산업디자인전문회사</strong>
+          <span>디자인 역량 공인</span>
+        </div>
+        <div class="trust-item anim su">
+          <div class="trust-mark"></div>
+          <strong>ISO 인증</strong>
+          <span>국제 표준 시스템 인증</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Cases ===== -->
+<section class="bg-paper">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">고객 사례</span>
+      <h2>아이디어가 <span class="hl-italic">실제 서비스</span>가 된 순간</h2>
+      <p>3W와 함께 만든 서비스들. 다양한 분야에서 결과로 증명합니다.</p>
+    </div>
+    <div class="case-list seq">
+      <div class="case-row anim sl">
+        <!-- 임시 스톡 이미지 — 실제 사진으로 교체 예정 -->
+        <div class="case-media"><img src="https://loremflickr.com/900/640/coffee,cafe" alt="odd project 카페 브랜드" loading="lazy" /></div>
+        <div class="case-info">
+          <span class="case-kind">카페 · 브랜드</span>
+          <h3>odd project</h3>
+          <p>오프라인 카페 브랜드의 디지털 전환 프로젝트.</p>
+        </div>
+      </div>
+      <div class="case-row flip anim sr">
+        <!-- 임시 스톡 이미지 — 실제 사진으로 교체 예정 -->
+        <div class="case-media"><img src="https://loremflickr.com/900/640/korean,woman,beauty" alt="블랙라벨 성형 정보 플랫폼" loading="lazy" /></div>
+        <div class="case-info">
+          <span class="case-kind">플랫폼 · 헬스케어</span>
+          <h3>블랙라벨</h3>
+          <p>성형 정보를 연결하는 플랫폼 구축 프로젝트.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Pricing ===== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">가격 안내</span>
+      <h2>필요한 만큼, <span class="hl-italic">명확한 가격</span>으로</h2>
+      <p>처음부터 끝까지 만드는 올인원 패키지와, 기존 서비스를 키우는 업그레이드 패키지.</p>
+    </div>
+    <div class="price-grid">
+      <div class="price-card featured anim sl">
+        <span class="price-tag">⭐ 대표 패키지</span>
+        <p class="price-name">올인원 패키지</p>
+        <p class="price-amount">초기 개발비 <span data-count="500">0</span><span class="unit">만원</span></p>
+        <span class="price-payback">정부지원사업 선정 시 전액 페이백</span>
+        <p class="price-desc">아이디어 검토부터 디자인·개발·배포까지, 처음부터 끝까지 한 번에.</p>
+        <ul class="price-list">
+          <li><span class="ck">✓</span>지원 가능성 검토 · 사업 매칭</li>
+          <li><span class="ck">✓</span>사업화 기획</li>
+          <li><span class="ck">✓</span>디자인 · 개발 · 배포</li>
+          <li><span class="ck">✓</span>선정 이후 성장 지원</li>
+          <li><span class="ck">✓</span>성과에 따른 단계적 결제</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-block">상담 신청하기 <span class="arrow">→</span></a>
+      </div>
+      <div class="price-card anim sr">
+        <p class="price-name">업그레이드 패키지</p>
+        <p class="price-amount">가격 협의</p>
+        <span class="price-payback">규모에 맞춘 맞춤 견적</span>
+        <p class="price-desc">이미 운영 중인 서비스의 고도화와 기능 추가가 필요할 때.</p>
+        <ul class="price-list">
+          <li><span class="ck">✓</span>기존 서비스 진단</li>
+          <li><span class="ck">✓</span>추가 기능 개발</li>
+          <li><span class="ck">✓</span>화면 · 사용성 개선</li>
+          <li><span class="ck">✓</span>규모에 맞춘 맞춤 견적</li>
+        </ul>
+        <a href="#contact" class="btn btn-soft btn-block">견적 문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact" class="bg-paper">
+  <div class="wrap">
+    <div class="s-head anim su">
+      <span class="eyebrow">상담 신청</span>
+      <h2>아이디어만 <span class="hl-italic">알려주세요</span></h2>
+      <p>정부 지원 가능 여부부터 함께 검토해 드립니다. 상담은 무료입니다.</p>
+    </div>
+    <div class="contact-box anim sc">
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="name">이름 / 회사명</label>
+            <input type="text" id="name" name="name" placeholder="홍길동 / 3W" required />
+          </div>
+          <div class="field">
+            <label for="phone">연락처</label>
+            <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+        </div>
+        <div class="field">
+          <label for="message">문의 내용</label>
+          <textarea id="message" name="message" placeholder="구상 중인 아이디어나 궁금한 점을 간단히 적어주세요."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">상담 신청하기 <span class="arrow">→</span></button>
+        <p class="form-note">제출하신 정보는 상담 목적으로만 사용됩니다.</p>
+        <div class="form-msg" id="formMsg">신청해 주셔서 감사합니다. 상담 폼 연동은 준비 중이며, 곧 실제 접수가 가능합니다.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="logo">
+        <span class="mark"><span>w</span><span>w</span><span>w</span></span>
+        <span class="logo-label">정부지원 사업화 파트너</span>
+      </a>
+      <div class="foot-right">회사 홈페이지 · <a href="https://3w.ai.kr" target="_blank" rel="noopener">3w.ai.kr</a></div>
+    </div>
+    <div class="foot-copy">© 2026 3W. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  // --- Header shadow on scroll ---
+  const header = document.querySelector('.header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // --- Reveal / slide animations ---
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.16 });
+  document.querySelectorAll('.anim').forEach((el) => io.observe(el));
+
+  // --- Marquee seamless loop ---
+  const mqTrack = document.querySelector('.marquee-track');
+  if (mqTrack) {
+    const mqSet = mqTrack.innerHTML;
+    const fillMarquee = () => {
+      mqTrack.innerHTML = mqSet;
+      const setWidth = mqTrack.scrollWidth;
+      if (!setWidth) return;
+      const halfSets = Math.ceil(window.innerWidth / setWidth) + 1;
+      mqTrack.innerHTML = mqSet.repeat(halfSets * 2);
+      mqTrack.style.animationDuration = (halfSets * 28) + 's';
+    };
+    fillMarquee();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fillMarquee);
+    let mqResizeT;
+    window.addEventListener('resize', () => {
+      clearTimeout(mqResizeT);
+      mqResizeT = setTimeout(fillMarquee, 200);
+    }, { passive: true });
+  }
+
+  // --- Count-up numbers ---
+  document.querySelectorAll('[data-count]').forEach((el) => {
+    const target = parseInt(el.dataset.count, 10);
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        cio.unobserve(el);
+        const start = performance.now();
+        const dur = 1300;
+        const tick = (now) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.round(target * eased).toLocaleString('ko-KR');
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    cio.observe(el);
+  });
+
+  // --- Process scroll effect (continuous) ---
+  const procSteps = [...document.querySelectorAll('.proc-step')];
+  if (procSteps.length) {
+    const procNum = document.querySelector('[data-proc-num]');
+    const procLabel = document.querySelector('[data-proc-label]');
+    const procFill = document.querySelector('.proc-track-fill');
+    const procCurrent = document.querySelector('[data-proc-current]');
+    let activeIdx = -1;
+
+    let ticking = false;
+    const updateProc = () => {
+      ticking = false;
+      const vh = window.innerHeight;
+      const mid = vh / 2;
+
+      const centers = procSteps.map((s) => {
+        const r = s.getBoundingClientRect();
+        return r.top + r.height / 2;
+      });
+
+      // continuous progress bar: tracks scroll between first and last step
+      const span = centers[centers.length - 1] - centers[0];
+      let progress = span > 0 ? (mid - centers[0]) / span : 0;
+      progress = Math.max(0, Math.min(1, progress));
+      procFill.style.width = (progress * 100) + '%';
+
+      // continuous dimming: brighter the closer a step is to screen center
+      let best = 0, bestDist = Infinity;
+      centers.forEach((c, i) => {
+        const dist = Math.abs(c - mid);
+        if (dist < bestDist) { bestDist = dist; best = i; }
+        procSteps[i].style.opacity = Math.max(0.4, 1 - dist / (vh * 0.6)).toFixed(3);
+      });
+
+      // discrete updates only when the nearest step changes
+      if (best !== activeIdx) {
+        activeIdx = best;
+        procSteps.forEach((s, i) => s.classList.toggle('active', i === best));
+        procNum.textContent = procSteps[best].querySelector('.proc-step-num').textContent;
+        procLabel.textContent = procSteps[best].querySelector('h3').textContent;
+        if (procCurrent) procCurrent.textContent = best + 1;
+      }
+    };
+    const onProcScroll = () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(updateProc); }
+    };
+    window.addEventListener('scroll', onProcScroll, { passive: true });
+    window.addEventListener('resize', onProcScroll, { passive: true });
+    updateProc();
+  }
+
+  // --- Contact form (visual only for now) ---
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    msg.classList.add('show');
+    msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>
