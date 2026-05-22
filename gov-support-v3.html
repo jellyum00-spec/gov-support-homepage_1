@@ -6,10 +6,7 @@
 <title>정부지원 사업화 파트너 | 3W</title>
 <meta name="description" content="지금 만들고, 정부지원사업에 선정되면 개발비 전액 페이백. 아이디어 검토부터 제작까지, 정부지원 사업화 파트너 3W." />
 <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
 <style>
   :root {
     --white: #ffffff;
@@ -191,8 +188,8 @@
     animation: scroll 28s linear infinite;
   }
   .marquee-item {
-    font-family: 'Gowun Dodum', sans-serif;
-    font-size: 18px; font-weight: 400; letter-spacing: -.005em;
+    font-family: var(--serif);
+    font-size: 18px; font-weight: 500; letter-spacing: -.005em;
     color: var(--ink); white-space: nowrap; padding: 0 36px;
     display: flex; align-items: center;
   }
@@ -418,6 +415,7 @@
     width: 100%; height: 100%; object-fit: cover; display: block;
     transition: transform .55s cubic-bezier(.16,1,.3,1);
   }
+  .case-row.odd-street .case-media img { object-position: 50% 28%; }
   .case-row:hover .case-media img { transform: scale(1.06); }
   .case-media::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -903,18 +901,16 @@
       <p>3W와 함께 만든 서비스들. 다양한 분야에서 결과로 증명합니다.</p>
     </div>
     <div class="case-list seq">
-      <div class="case-row anim sl">
-        <!-- 임시 스톡 이미지 — 실제 사진으로 교체 예정 -->
-        <div class="case-media"><img src="https://loremflickr.com/900/640/coffee,cafe" alt="odd project 카페 브랜드" loading="lazy" /></div>
+      <div class="case-row odd-street anim sl">
+        <div class="case-media"><img src="assets/odd-street.jpg" alt="ODD Street 카페 브랜드" loading="lazy" /></div>
         <div class="case-info">
           <span class="case-kind">카페 · 브랜드</span>
-          <h3>odd project</h3>
-          <p>오프라인 카페 브랜드의 디지털 전환 프로젝트.</p>
+          <h3>ODD Street</h3>
+          <p>신규 카페 브랜드 런칭 및 디지털 최적화 프로젝트.</p>
         </div>
       </div>
       <div class="case-row flip anim sr">
-        <!-- 임시 스톡 이미지 — 실제 사진으로 교체 예정 -->
-        <div class="case-media"><img src="https://loremflickr.com/900/640/korean,woman,beauty" alt="블랙라벨 성형 정보 플랫폼" loading="lazy" /></div>
+        <div class="case-media"><img src="assets/blacklabel.jpg" alt="블랙라벨 성형 정보 플랫폼" loading="lazy" /></div>
         <div class="case-info">
           <span class="case-kind">플랫폼 · 헬스케어</span>
           <h3>블랙라벨</h3>
